@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para K</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            background-color: #ffccdc;
+            font-family: Arial, sans-serif;
+        }
+        h1, h2 {
+            color: #d63384;
+        }
+        img {
+            width: 80%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #d63384;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button1 {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button2 {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #c2185b;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="pantalla1">
+    <h1>Holiii mi amor</h1>
+    <h2>tengo una pregunta q hacerte</h2>
+    <img src="assets/gruñosito.png" alt="chamare no carga la imagen jajaja">
+    <br>
+    <button onclick="mostrarPantalla2()">A ver, pregunta pues</button>
+</div>
+<div id="pantalla2" class="hidden">
+    <h2>Sé que me iré de viaje el 12</h2>
+    <h2>y no podremos estar juntos el 14 :c</h2>
+    <img src="assets/gruñosito-2.png" alt="chamare no carga la imagen jajaja">
+    <p>Pero para mí la fecha es lo de menos</p>
+    <p>yo solo quiero pasarla con la persona que más me hace feliz en este mundo</p>
+    <button onclick="mostrarPantalla3()">Ya florero, y la pregunta?</button>
+</div>
+<div id="pantalla3" class="hidden">
+    <h2>¿QUISIERAS SER MI SAN VALENTÍN</h2>
+    <h2>Y PASAR EL 11 CONMIGO </h2>
+    <h2>COMO UNA PAREJITA ROMÁNTICA? </h2>
+    <img src="assets/alegrosita.png" alt="chamare no carga la imagen jajaja">
+    <br>
+    <button1 onclick="mostrarPantalla4()">SIIII</button1>
+    <button2 onclick="mostrarPantalla5()">NADOTA</button2>
+</div>
+<div id="pantalla4" class="hidden">
+    <h2>Gracias mi amor ahi nos vemos</h2>
+    <h2>jajsja te quiero muchooooo</h2>
+</div>
+<div id="pantalla5" class="hidden">
+    <h2>LE DAS AL NO OTRA VEZ</h2>
+    <h2>Y ME RESIENTO</h2>
+    <img src="assets/gruñosito-3.png" alt="chamare no carga la imagen jajaja">
+    <h2>VAS A SER MI SAN VALENTIN?</h2>
+    <button1 onclick="mostrarPantalla4()">SIIII</button1>
+    <button2 onclick="mostrarPantalla6()">NADOTA DIJE</button2>
+</div>
+<div id="pantalla6" class="hidden">
+    <h2>YA ME RESENTÍ</h2>
+    <h2>AHORA SOLO PUEDES DECIR QUE SI</h2>
+    <img src="assets/gruñosito-4.png" alt="chamare no carga la imagen jajaja">
+    <h2>SERAS MI SAN VALENTINNNN?</h2>
+    <button1 onclick="mostrarPantalla4()">bueno</button1>
+</div>
+
+<script>
+    function mostrarPantalla2() {
+        document.getElementById('pantalla1').classList.add('hidden');
+        document.getElementById('pantalla2').classList.remove('hidden');
+    }
+    function mostrarPantalla3() {
+        document.getElementById('pantalla1').classList.add('hidden');
+        document.getElementById('pantalla2').classList.add('hidden');
+        document.getElementById('pantalla3').classList.remove('hidden');
+    }
+    function mostrarPantalla4() {
+        document.getElementById('pantalla1').classList.add('hidden');
+        document.getElementById('pantalla2').classList.add('hidden');
+        document.getElementById('pantalla3').classList.add('hidden');
+        document.getElementById('pantalla5').classList.add('hidden')
+        document.getElementById('pantalla6').classList.add('hidden');
+        document.getElementById('pantalla4').classList.remove('hidden');
+   }
+    function mostrarPantalla5() {
+        document.getElementById('pantalla1').classList.add('hidden');
+        document.getElementById('pantalla2').classList.add('hidden');
+        document.getElementById('pantalla3').classList.add('hidden');
+        document.getElementById('pantalla4').classList.add('hidden');
+        document.getElementById('pantalla5').classList.remove('hidden');
+    }
+    function mostrarPantalla6() {
+        document.getElementById('pantalla1').classList.add('hidden');
+        document.getElementById('pantalla2').classList.add('hidden');
+        document.getElementById('pantalla3').classList.add('hidden');
+        document.getElementById('pantalla4').classList.add('hidden');
+        document.getElementById('pantalla5').classList.add('hidden')
+        document.getElementById('pantalla6').classList.remove('hidden');
+    }
+</script>
+</body>
+</html>
